@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Shop OpenCart Test automtion regression suite"
+       thread-count="3" parallel="tests" verbose="3">
+
+
+    <listeners>
+        <listener
+                class-name="com.qa.opencart.testlisteners.ExtentReportListener"/>
+        <listener
+                class-name="com.qa.opencart.testlisteners.TestAllureListener"/>
+    </listeners>
+
+    <test name="Login page Test_Chrome">
+        <parameter name="Browser" value="Chrome"/>
+        <parameter name="version" value="117"/>
+        <classes>
+            <class name="com.qa.opencart.tests.LoginPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Accounts page Test_chrome">
+        <parameter name="Browser" value="Chrome"/>
+        <parameter name="version" value="117"/>
+        <classes>
+            <class name="com.qa.opencart.tests.AccountsPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Product InfoPage Test_Chrome">
+        <parameter name="Browser" value="Chrome"/>
+        <parameter name="version" value="117"/>
+        <classes>
+            <class name="com.qa.opencart.tests.ProductInfoPageTest"/>
+        </classes>
+    </test>
+    <!--    <test name="Login page Test_firefox">-->
+    <!--        <parameter name="browser" value="firefox"/>-->
+    <!--        <parameter name="version" value="117"/>-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.opencart.tests.LoginPageTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="Accounts page Test_firefox">-->
+    <!--        <parameter name="browser" value="firefox"/>-->
+    <!--        <parameter name="version" value="117"/>-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.opencart.tests.AccountsPageTest"/>-->
+    <!--        </classes>-->
+
+    <!--    </test>-->
+    <!--    <test name="Product InfoPage Test_Firefox">-->
+    <!--        <parameter name="browser" value="firefox"/>-->
+    <!--        <parameter name="version" value="117"/>-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.opencart.tests.ProductInfoPageTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!-- <test name="Reg page Test"> <classes> <class name="com.qa.opencart.tests.RegisterPageTest"
+        /> </classes> </test> -->
+
+
+</suite>
